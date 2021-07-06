@@ -4,7 +4,11 @@ InstantSearch widget that makes a date range picker
 
 ---
 
-[![MIT](https://img.shields.io/npm/l/@algolia/instantsearch-widget-date-range-picker)](./LICENSE) [![NPM version](http://img.shields.io/npm/v/@algolia/instantsearch-widget-date-range-picker.svg)](https://npmjs.org/package/@algolia/instantsearch-widget-date-range-picker)
+[![MIT](https://img.shields.io/npm/l/@algolia/instantsearch-widget-date-range-picker)](./LICENSE.md) [![NPM version](http://img.shields.io/npm/v/@algolia/instantsearch-widget-date-range-picker.svg)](https://npmjs.org/package/@algolia/instantsearch-widget-date-range-picker)
+
+## Demo
+
+[Demo](https://codesandbox.io/s/github/algolia/instantsearch-widget-date-range-picker?file=/example/index.ts) on CodeSandbox.
 
 ## Install
 
@@ -53,14 +57,14 @@ This widget is using [`@duetds/date-picker`](https://github.com/duetds/date-pick
 ### Usage
 
 ```js
-import instantsearch from "instantsearch.js";
-import algoliasearch from "algoliasearch/lite";
-import { dateRangePicker } from "@algolia/instantsearch-widget-date-range-picker";
+import instantsearch from 'instantsearch.js';
+import algoliasearch from 'algoliasearch/lite';
+import { dateRangePicker } from '@algolia/instantsearch-widget-date-range-picker';
 
-const searchClient = algoliasearch("appId", "apiKey");
+const searchClient = algoliasearch('appId', 'apiKey');
 
 const search = instantsearch({
-  indexName: "indexName",
+  indexName: 'indexName',
   searchClient,
 });
 
@@ -75,10 +79,10 @@ search.start();
 
 ### Options
 
-| Option                    | Type                      | Required | Default | Description                                  |
-| :------------------------ | :------------------------ | :------- | :------ | -------------------------------------------- |
-| [`container`](#container) | `string` or `HTMLElement` | true     | -       | The element to insert the widget into.       |
-| [`option1`](#option1)     | `...`                     | true     | -       | REPLACE WITH THE DESCRIPTION FOR THIS OPTION |
+| Option | Type | Required | Default | Description |
+| :-- | :-- | :-- | :-- | --- |
+| [`container`](#container) | `string` or `HTMLElement` | true | - | The element to insert the widget into. |
+| [`option1`](#option1) | `...` | true | - | REPLACE WITH THE DESCRIPTION FOR THIS OPTION |
 
 #### container
 
@@ -90,7 +94,7 @@ This can be either a valid CSS Selector:
 
 ```js
 dateRangePicker({
-  container: "#date-range-picker",
+  container: '#date-range-picker',
   // ...
 });
 ```
@@ -99,7 +103,7 @@ or an `HTMLElement`:
 
 ```js
 dateRangePicker({
-  container: document.querySelector("#date-range-picker"),
+  container: document.querySelector('#date-range-picker'),
   // ...
 });
 ```
@@ -112,7 +116,7 @@ REPLACE WITH THE DESCRIPTION FOR THIS OPTION
 
 ```js
 dateRangePicker({
-  option1: "value",
+  option1: 'value',
   // ...
 });
 ```
@@ -122,7 +126,7 @@ dateRangePicker({
 ### Usage
 
 ```js
-import { connectDateRangePicker } from "@algolia/instantsearch-widget-date-range-picker";
+import { connectDateRangePicker } from '@algolia/instantsearch-widget-date-range-picker';
 
 // 1. Create a render function
 const renderDateRangePicker = (renderOptions, isFirstRender) => {
@@ -171,14 +175,14 @@ All original widget options forwarded to the render function.
 ```js
 const renderDateRangePicker = (renderOptions, isFirstRender) => {
   const { widgetParams } = renderOptions;
-  widgetParams.container.innerHTML = "...";
+  widgetParams.container.innerHTML = '...';
 };
 
 const customDateRangePicker = connectDateRangePicker(renderDateRangePicker);
 
 search.addWidgets([
   customDateRangePicker({
-    container: document.querySelector("#date-range-picker"),
+    container: document.querySelector('#date-range-picker'),
     // ...
   }),
 ]);
