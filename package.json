@@ -54,7 +54,6 @@
     "@types/react-dom": "17.0.1",
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/parser": "4.16.1",
-    "algoliasearch": "^4.10.3",
     "algoliasearch-helper": "3.4.4",
     "babel-jest": "26.6.3",
     "babel-plugin-add-import-extension": "1.5.0",
@@ -66,7 +65,6 @@
     "eslint-plugin-jest": "24.1.5",
     "eslint-plugin-jsdoc": "32.2.0",
     "eslint-plugin-prettier": "3.3.1",
-    "instantsearch.js": "^4.25.0",
     "jest": "26.6.3",
     "parcel-bundler": "1.12.5",
     "prettier": "2.2.1",
@@ -80,5 +78,9 @@
     "last 2 edge versions",
     "last 2 safari versions",
     "IE 11"
-  ]
+  ],
+  "dependencies": {
+    "algoliasearch": "^4.10.3",
+    "instantsearch.js": "4.25.0-experimental-typescript.0"
+  }
 }

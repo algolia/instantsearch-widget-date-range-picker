@@ -1,12 +1,7 @@
 import algoliasearch from 'algoliasearch/lite';
 import instantsearch from 'instantsearch.js';
 import { highlight } from 'instantsearch.js/es/helpers';
-import {
-  searchBox,
-  hits,
-  refinementList,
-  pagination,
-} from 'instantsearch.js/es/widgets';
+import { searchBox, hits, pagination } from 'instantsearch.js/es/widgets';
 
 import { dateRangePicker } from '../src';
 
