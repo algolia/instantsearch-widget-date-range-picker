@@ -1,3 +1,2 @@
-export { dateRangePicker } from './widget';
-export { connectDateRangePicker } from './connector';
-export { createDateRangePickerRenderer } from './renderer';
+export { dateRangePicker } from "./widget";
+export { createDateRangePickerRenderer } from "./renderer";

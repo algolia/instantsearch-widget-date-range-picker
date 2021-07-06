@@ -6,7 +6,6 @@ import type { Renderer, Connector, WidgetFactory } from 'instantsearch.js';
  */
 export type DateRangePickerWidgetParams = {
   container: Element | string;
-  // TODO: add the widget params
 };
 
 /*
@@ -14,7 +13,7 @@ export type DateRangePickerWidgetParams = {
  * These parameters will be used by the widget creator to manage the widget logic
  */
 export type DateRangePickerConnectorParams = {
-  // TODO: add the widget params
+  attribute: string;
 };
 
 export type DateRangePickerRenderState = {
@@ -32,7 +31,7 @@ type DateRangePickerWidgetDescription = {
   indexUiState: {
     dateRangePicker: {
       // TODO: add the return type of getWidgetUiState
-    }
+    };
   };
 };
 

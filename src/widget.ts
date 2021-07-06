@@ -1,4 +1,5 @@
-import { connectDateRangePicker } from './connector';
+import { connectRange } from 'instantsearch.js/es/connectors';
+
 import { createDateRangePickerRenderer } from './renderer';
 import type {
   DateRangePickerWidgetCreator,
@@ -11,21 +12,20 @@ import type {
  * Returns a widget instance
  */
 export const dateRangePicker: DateRangePickerWidgetCreator = function DateRangePicker(
-  widgetParams
+  widgetParams: DateRangePickerWidgetParams & DateRangePickerConnectorParams
 ) {
   const rendererWidgetParams: DateRangePickerWidgetParams = {
     container: widgetParams.container,
-    // TODO: pick the widget-only parameters from the widgetParams
   };
 
   const { render, dispose } = createDateRangePickerRenderer(
     rendererWidgetParams
   );
 
-  const createWidget = connectDateRangePicker(render, dispose);
+  const createWidget = connectRange(render, dispose);
 
   const connectorParams: DateRangePickerConnectorParams = {
-    // TODO: pick the connector-only parameters from the widgetParams
+    attribute: widgetParams.attribute,
   };
 
   return {
